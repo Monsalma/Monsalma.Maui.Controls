@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:controls="clr-namespace:Monsalma.Maui.Controls;assembly=Monsalma.Maui.Controls"
+	xmlns:data="clr-namespace:Monsalma_Maui_v010001.Data"
+	xmlns:viewmodels="clr-namespace:Monsalma_Maui_v010001.ViewModels"
+	xmlns:datatemplateselectors="clr-namespace:Monsalma_Maui_v010001.DataTemplateSelectors"
+	x:Class="Monsalma_Maui_v010001.MainPage"
+	x:DataType="viewmodels:MainViewModel">
+
+	<ContentPage.BindingContext>
+		<viewmodels:MainViewModel />
+	</ContentPage.BindingContext>
+
+	<ContentPage.Resources>
+		<Style
+			TargetType="controls:DataGridRowHeader"
+			x:Key="HeaderRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Primary}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=White}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="RegularOddRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=White}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="RegularEvenRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Gray100}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="SelectedRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Yellow100Accent}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<DataTemplate
+			x:Key="century20Template"
+			x:DataType="data:WorldCupWinner">
+
+			<Grid
+				Padding="5"
+				BindingContext="{Binding Path=BindingContext, Source={RelativeSource TemplatedParent}}"
+				HorizontalOptions="Fill"
+				ColumnDefinitions="Auto, Auto">
+
+				<Image
+					Grid.Column="0"
+					WidthRequest="32"
+					HeightRequest="24"
+					VerticalOptions="Center"
+					Source="{Binding ImageSource}" />
+				<Label
+					Grid.Column="1"
+					Padding="5"
+					VerticalOptions="Center"
+					Text="{Binding Country}" />
+			</Grid>
+		</DataTemplate>
+
+		<DataTemplate
+			x:Key="century21Template"
+			x:DataType="data:WorldCupWinner">
+
+			<Grid
+				Padding="5"
+				BindingContext="{Binding Path=BindingContext, Source={RelativeSource TemplatedParent}}"
+				HorizontalOptions="Fill"
+				ColumnDefinitions="Auto, Auto">
+
+				<Label
+					Grid.Column="0"
+					Padding="5"
+					VerticalOptions="Center"
+					Text="{Binding Country}" />
+				<Image
+					Grid.Column="1"
+					WidthRequest="32"
+					HeightRequest="24"
+					VerticalOptions="Center"
+					Source="{Binding ImageSource}" />
+			</Grid>
+		</DataTemplate>
+
+		<datatemplateselectors:WorldCupWinnerDataTemplateSelector
+			x:Key="countryDataTemplateSelector"
+			Century20Template="{StaticResource Key=century20Template}"
+			Century2021Template="{StaticResource Key=century21Template}" />
+	</ContentPage.Resources>
+
+	<Grid
+		ColumnDefinitions="*"
+		RowDefinitions="*">
+
+		<Border
+			Margin="10"
+			Padding="10"
+			VerticalOptions="Start">
+
+			<controls:DataGrid
+				Margin="5"
+				Items="{Binding WorldCupWinners}"
+				SelectionMode="Multiple"
+				SelectedItem="{Binding SelectedWorldCupWinner, Mode=TwoWay}"
+				SelectedItems="{Binding SelectedWorldCupWinners, Mode=TwoWay}"
+				HeaderRowStyle="{StaticResource Key=HeaderRowStyle}"
+				RegularOddRowStyle="{StaticResource Key=RegularOddRowStyle}"
+				RegularEvenRowStyle="{StaticResource Key=RegularEvenRowStyle}"
+				SelectedRowStyle="{StaticResource Key=SelectedRowStyle}">
+
+				<controls:DataGrid.Columns>
+
+					<controls:DataGridColumnText
+						Width="Auto"
+						MinWidth="100"
+						DataBinding="Year"
+						HeaderText="Year"
+						CellPadding="5"
+						CellHorizontalAlignment="Center"
+						CellVerticalAlignment="Center" />
+
+					<controls:DataGridColumnTemplated
+						Width="*"
+						MinWidth="100"
+						MaxWidth="200"
+						HeaderText="Country"
+						CellPadding="5"
+						CellHorizontalAlignment="Start"
+						CellVerticalAlignment="Center"
+						CellTemplate="{StaticResource Key=countryDataTemplateSelector}" />
+
+					<controls:DataGridColumnText
+						Width="*"
+						MinWidth="100"
+						MaxWidth="200"
+						DataBinding="GoldenBallWinner"
+						HeaderText="Golden Ball Winner"
+						CellPadding="5"
+						CellHorizontalAlignment="Start"
+						CellVerticalAlignment="Center" />
+
+				</controls:DataGrid.Columns>
+
+			</controls:DataGrid>
+
+		</Border>
+
+	</Grid>
+
+</ContentPage>

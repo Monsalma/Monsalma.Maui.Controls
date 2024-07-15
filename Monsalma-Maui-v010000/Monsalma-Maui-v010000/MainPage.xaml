@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:controls="clr-namespace:Monsalma.Maui.Controls;assembly=Monsalma.Maui.Controls"
+	xmlns:viewmodels="clr-namespace:Monsalma_Maui_v010000.ViewModels"
+	x:Class="Monsalma_Maui_v010000.MainPage"
+	x:DataType="viewmodels:MainViewModel">
+
+	<ContentPage.BindingContext>
+		<viewmodels:MainViewModel />
+	</ContentPage.BindingContext>
+
+	<ContentPage.Resources>
+		<Style
+			TargetType="controls:DataGridRowHeader"
+			x:Key="HeaderRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Primary}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=White}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="RegularOddRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=White}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="RegularEvenRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Gray100}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRow"
+			x:Key="SelectedRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Yellow100Accent}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+	</ContentPage.Resources>
+
+	<Grid
+		ColumnDefinitions="*"
+		RowDefinitions="*">
+
+		<Border
+			Margin="10"
+			Padding="10">
+
+			<controls:DataGrid
+				Items="{Binding Persons}"
+				SelectionMode="Multiple"
+				SelectedItem="{Binding SelectedPerson, Mode=TwoWay}"
+				SelectedItems="{Binding SelectedPersons, Mode=TwoWay}"
+				HeaderRowStyle="{StaticResource Key=HeaderRowStyle}"
+				RegularOddRowStyle="{StaticResource Key=RegularOddRowStyle}"
+				RegularEvenRowStyle="{StaticResource Key=RegularEvenRowStyle}"
+				SelectedRowStyle="{StaticResource Key=SelectedRowStyle}">
+
+				<controls:DataGrid.Columns>
+
+					<controls:DataGridColumnText
+						Width="Auto"
+						MinWidth="100"
+						MaxWidth="200"
+						DataBinding="Row"
+						HeaderText="#" />
+
+					<controls:DataGridColumnText
+						Width="*"
+						MinWidth="100"
+						DataBinding="FirstName"
+						HeaderText="First Name" />
+
+					<controls:DataGridColumnText
+						Width="*"
+						MinWidth="100"
+						DataBinding="LastName"
+						HeaderText="Last Name" />
+
+				</controls:DataGrid.Columns>
+
+			</controls:DataGrid>
+
+		</Border>
+
+	</Grid>
+
+</ContentPage>
