@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:controls="clr-namespace:Monsalma.Maui.Controls;assembly=Monsalma.Maui.Controls"
+	xmlns:data="clr-namespace:Monsalma_Maui_v010003.Data"
+	xmlns:viewmodels="clr-namespace:Monsalma_Maui_v010003.ViewModels"
+	x:Class="Monsalma_Maui_v010003.MainPage"
+	x:DataType="viewmodels:MainViewModel">
+
+	<ContentPage.BindingContext>
+		<viewmodels:MainViewModel />
+	</ContentPage.BindingContext>
+
+	<ContentPage.Resources>
+		<Style
+			TargetType="controls:DataGridRowHeader"
+			x:Key="HeaderRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Primary}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=White}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="RegularOddRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=White}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="RegularEvenRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Gray100}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="SelectedRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Yellow100Accent}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+	</ContentPage.Resources>
+
+	<Grid
+		ColumnDefinitions="*"
+		RowDefinitions="*">
+
+		<Border
+			Margin="10"
+			Padding="10"
+			VerticalOptions="Start">
+
+			<controls:DataGrid
+				Margin="5"
+				Items="{Binding DemoData}"
+				SelectionMode="Single"
+				SelectedItem="{Binding SelectedDemoData, Mode=TwoWay}"
+				HeaderRowStyle="{StaticResource Key=HeaderRowStyle}"
+				RegularOddRowStyle="{StaticResource Key=RegularOddRowStyle}"
+				RegularEvenRowStyle="{StaticResource Key=RegularEvenRowStyle}"
+				SelectedRowStyle="{StaticResource Key=SelectedRowStyle}"
+				ShowHeaderRow="False"
+				VirtualizationEnabled="True"
+				VirtualizationInitialRowsToLoad="50"
+				VirtualizationRowsBeforeActing="20"
+				VirtualizationRowsToLoad="30"
+				VirtualizationMinRowsToUnload="100">
+
+				<controls:DataGrid.Columns>
+
+					<controls:DataGridColumnText
+						Width="*"
+						MinWidth="100"
+						DataBinding="RowNumber"
+						HeaderText="#" />
+
+					<controls:DataGridColumnText
+						Width="*"
+						MinWidth="100"
+						DataBinding="ColumnA"
+						HeaderText="Column A" />
+
+					<controls:DataGridColumnText
+						Width="*"
+						DataBinding="ColumnB"
+						HeaderText="Column B" />
+
+				</controls:DataGrid.Columns>
+
+			</controls:DataGrid>
+
+		</Border>
+
+	</Grid>
+
+</ContentPage>
