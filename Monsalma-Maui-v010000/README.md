@@ -47,8 +47,8 @@ More info at: [https://monsalma.net/monsalma-controls-for-net-maui/monsalma-data
 
 ### Windows
 
-![Monsalma Data Grid for .NET MAUI - Demo - NBA MVPs - Windows](https://raw.githubusercontent.com/Monsalma/Monsalma.Maui.Controls/refs/heads/main/Images/v010000_DataGrid_NBAMVPs_Windows.png)
+![Monsalma Data Grid for .NET MAUI - Demo - NBA MVPs - Windows](/Images/v010000_DataGrid_NBAMVPs_Windows.png)
 
 ### Android
 
-![Monsalma Data Grid for .NET MAUI - Demo - NBA MVPs - Android](https://raw.githubusercontent.com/Monsalma/Monsalma.Maui.Controls/refs/heads/main/Images/v010000_DataGrid_NBAMVPs_Android.png)
+![Monsalma Data Grid for .NET MAUI - Demo - NBA MVPs - Android](/Images/v010000_DataGrid_NBAMVPs_Android.png)
