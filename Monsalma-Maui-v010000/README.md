@@ -1,6 +1,6 @@
 # Monsalma.Maui.Controls v1.0.0 Demo
 
-NBA fan? This demo uses Monsalma DataGrid control to display all NBA MVPs.  
+NBA fan? This demo uses Monsalma `DataGrid` control to display all NBA MVPs.  
 
 To get started, please download Monsalma.Maui.Controls NuGet package:
 [https://www.nuget.org/packages/Monsalma.Maui.Controls/1.0.0](https://www.nuget.org/packages/Monsalma.Maui.Controls/1.0.0).
