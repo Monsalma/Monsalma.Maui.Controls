@@ -17,7 +17,7 @@ Instances of the `Person` class (`Monsalma_Maui_v010000.Data.Person`) contain th
 
 ## View Model
 
-`MainViewModel` (`Monsalma_Maui_v010000.ViewModels.MainViewModel`) shuffles first and last names of NBA legends to produce a random list (100 items):
+`MainViewModel` (`Monsalma_Maui_v010000.ViewModels.MainViewModel`) randomly selects 100 NBA legends:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/2386b71f801007c0fa7952ad8452853626822cb8/Monsalma-Maui-v010000/Monsalma-Maui-v010000/ViewModels/MainViewModel.cs#L107-L126](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/2386b71f801007c0fa7952ad8452853626822cb8/Monsalma-Maui-v010000/Monsalma-Maui-v010000/ViewModels/MainViewModel.cs#L107-L126)
 
 ## View (XAML)
