@@ -9,4 +9,4 @@ To access manuals, please visit Monsalma site:
 
 ## DataGrid for .NET MAUI demo
 
-![Monsalma DataGrid for .NET MAUI](https://raw.githubusercontent.com/Monsalma/Monsalma.Maui.Controls/main/Images/v010001_DataGrid_WorldCupWinners.png)
+![Monsalma DataGrid for .NET MAUI](/Images/v010001_DataGrid_WorldCupWinners.png)
