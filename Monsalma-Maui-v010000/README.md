@@ -42,3 +42,13 @@ For example, `Row` column will take as much space as it needs (`Width="Auto"`), 
 More info at: [https://monsalma.net/monsalma-controls-for-net-maui/monsalma-data-grid-for-net-maui-column-width/](https://monsalma.net/monsalma-controls-for-net-maui/monsalma-data-grid-for-net-maui-column-width/).
 + `Items` object acts as a data source for the grid (`Items="{Binding Persons}"`). To specify the column data source, we use `DataBinding` bindable property (`DataBinding="FirstName"`).
 + We specify column header text with `HeaderText` (`HeaderText="First Name"`).
+
+## Screenshots
+
+### Windows
+
+![Monsalma Data Grid for .NET MAUI - Demo - NBA MVPs - Windows](https://raw.githubusercontent.com/Monsalma/Monsalma.Maui.Controls/refs/heads/main/Images/v010000_DataGrid_NBAMVPs_Windows.png)
+
+### Android
+
+![Monsalma Data Grid for .NET MAUI - Demo - NBA MVPs - Android](https://raw.githubusercontent.com/Monsalma/Monsalma.Maui.Controls/refs/heads/main/Images/v010000_DataGrid_NBAMVPs_Android.png)
