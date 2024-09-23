@@ -22,7 +22,7 @@ Then we define row styles (header row, odd row, even row and selected row) for t
 After that, we add the data grid markup:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/2386b71f801007c0fa7952ad8452853626822cb8/Monsalma-Maui-v010000/Monsalma-Maui-v010000/MainPage.xaml#L76-L84](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/2386b71f801007c0fa7952ad8452853626822cb8/Monsalma-Maui-v010000/Monsalma-Maui-v010000/MainPage.xaml#L76-L84)
 
-Lastly, we add the columns:
+Lastly, we add the columns. For this demo, we're using only the simplest column type (`DataGridColumnText `), which under the hub contain a `Label` instance:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/2386b71f801007c0fa7952ad8452853626822cb8/Monsalma-Maui-v010000/Monsalma-Maui-v010000/MainPage.xaml#L86-L107](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/2386b71f801007c0fa7952ad8452853626822cb8/Monsalma-Maui-v010000/Monsalma-Maui-v010000/MainPage.xaml#L86-L107)
 
 Things to note at this point:
