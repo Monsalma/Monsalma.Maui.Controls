@@ -16,8 +16,8 @@ To find code samples and more details, please visit the GitHub demo pages:
 
 ### Windows
 
-![Monsalma DataGrid for .NET MAUI - Demo - World Cup Winners - Windows](/Images/v010002_DataGrid_WorldCupWinners_Windows.png)
+![Monsalma DataGrid for .NET MAUI - Demo - World Cup Winners - Windows](https://raw.githubusercontent.com/Monsalma/Monsalma.Maui.Controls/refs/heads/main/Images/v010002_DataGrid_WorldCupWinners_Windows.png)
 
 ### Android
 
-![Monsalma DataGrid for .NET MAUI - Demo - World Cup Winners - Android](/Images/v010002_DataGrid_WorldCupWinners_Android.png)
+![Monsalma DataGrid for .NET MAUI - Demo - World Cup Winners - Android](https://raw.githubusercontent.com/Monsalma/Monsalma.Maui.Controls/refs/heads/main/Images/v010002_DataGrid_WorldCupWinners_Android_CellTemplate.png)
