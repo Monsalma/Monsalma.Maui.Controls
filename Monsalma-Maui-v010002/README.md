@@ -24,20 +24,30 @@ Instances of the `WorldCupWinner` class (`Monsalma_Maui_v010002.Data.WorldCupWin
 
 `MainPage` (`Monsalma_Maui_v010002.MainPage`) is the only page used in this demo.
 
+### Imports
+
 First we import the package ([`Monsalma.Maui.Controls`](https://www.nuget.org/packages/Monsalma.Maui.Controls/1.0.2)) and local namespaces (data, template selectors and view model):
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L5-L8](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L5-L8)
+
+### Row Styles
 
 Then we define row styles (header row, odd row, even row and selected row) for the data grid control:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L17-L67](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L17-L67)
 
-We define data templates and data template selector, to be used later on. 20<sup>th</sup> century winners template is slightly different than the 21<sup>st</sup> century template. This is just to ilustrate the power of templates.
+### Data Templates
+
+We define data templates and data template selector, to be used later on. 20<sup>th</sup> century winners template is slightly different than the 21<sup>st</sup> century template. This is just to illustrate the power of templates.
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L69-L120](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L69-L120)
 
 In addition to data templates and data template selector defined above, which were used in [the previous demo](/Monsalma-Maui-v010001#view-xaml) as well as in this one, in this version we introduce the edit template (to be used later on, when defining columns):
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L122-L129](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L122-L129)
 
+### Data Grid Definition
+
 `DataGrid` definition should be pretty straightforward. It it's not, please refer to the previous demo ([Monsalma-Maui-v010001](/Monsalma-Maui-v010001#view-xaml)).
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L143-L152](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L143-L152)
+
+### Column Definition
 
 Next, it's time to define our columns. `Year` and `GoldenBallWinner` columns are pretty much the same as in [the previous demo](/Monsalma-Maui-v010001#view-xaml). Now I'd like to highlight the usage of `CellIsReadOnlyBinding`, `CellTemplate` and `CellEditTemplate`:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L165-L176](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0d4940d006ac691373a521f94544783eb9739741/Monsalma-Maui-v010002/Monsalma-Maui-v010002/MainPage.xaml#L165-L176)
