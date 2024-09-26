@@ -24,20 +24,32 @@ Instances of the `WorldCupWinner` class (`Monsalma_Maui_v010001.Data.WorldCupWin
 
 `MainPage` (`Monsalma_Maui_v010001.MainPage`) is the only page used in this demo.
 
+### Imports
+
 First we import the package ([`Monsalma.Maui.Controls`](https://www.nuget.org/packages/Monsalma.Maui.Controls/1.0.1-beta)) and local namespaces (data, template selectors and view model):
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/926f5e3fbf35d32f83fcea6104d27e13cc63efa0/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L5-L8](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/926f5e3fbf35d32f83fcea6104d27e13cc63efa0/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L5-L8)
+
+### Row Styles
 
 Then we define row styles (header row, odd row, even row and selected row) for the data grid control:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/926f5e3fbf35d32f83fcea6104d27e13cc63efa0/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L17-L67](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/926f5e3fbf35d32f83fcea6104d27e13cc63efa0/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L17-L67)
 
+### Data Templates
+
 We define data templates and data template selector, to be used later on. 20<sup>th</sup> century winners template is slightly different than the 21<sup>st</sup> century template. This is just to illustrate the power of templates.
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/926f5e3fbf35d32f83fcea6104d27e13cc63efa0/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L69-L120](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/926f5e3fbf35d32f83fcea6104d27e13cc63efa0/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L69-L120)
+
+### Data Grid Definition
 
 `DataGrid` definition should be pretty straightforward. It it's not, please refer to the previous demo ([Monsalma-Maui-v010000](/Monsalma-Maui-v010000#view-xaml)).
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30042892bff50ea44b8dbd8d873f9d05e9566a6b/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L132-L141](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30042892bff50ea44b8dbd8d873f9d05e9566a6b/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L132-L141)
 
+### Column Definition
+
 Next, it's time to define our columns. For `Year` and `GoldenBallWinner` we'll use a simple text column (`DataGridColumnText`). Nothing new there. For `Country` we'll use a templated column (`DataGridColumnTemplated`):
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30042892bff50ea44b8dbd8d873f9d05e9566a6b/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L143-L174](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30042892bff50ea44b8dbd8d873f9d05e9566a6b/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L143-L174)
+
+### Conclusion
 
 The important thing to learn from this demo is how to use data templates, data template selector and templated column. This is the single line of code that brings all 3 concepts together:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30042892bff50ea44b8dbd8d873f9d05e9566a6b/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L162](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30042892bff50ea44b8dbd8d873f9d05e9566a6b/Monsalma-Maui-v010001/Monsalma-Maui-v010001/MainPage.xaml#L162)
