@@ -34,7 +34,7 @@ Then we define row styles (header row, odd row, even row and selected row) for t
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0cc0d5e35290a96e0c5c1c3bfca4fddfad40ebb9/Monsalma-Maui-v010003/Monsalma-Maui-v010003/MainPage.xaml#L78-L92](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0cc0d5e35290a96e0c5c1c3bfca4fddfad40ebb9/Monsalma-Maui-v010003/Monsalma-Maui-v010003/MainPage.xaml#L78-L92)
 
 This time, there's nothing fancy about the way we define columns:
-[https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0cc0d5e35290a96e0c5c1c3bfca4fddfad40ebb9/Monsalma-Maui-v010003/Monsalma-Maui-v010003/MainPage.xaml#L94-L111](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/0cc0d5e35290a96e0c5c1c3bfca4fddfad40ebb9/Monsalma-Maui-v010003/Monsalma-Maui-v010003/MainPage.xaml#L94-L111)
+[https://github.com/Monsalma/Monsalma.Maui.Controls/blob/165afd6c5cdd11b4a8d5f137e9b9093581e38c10/Monsalma-Maui-v010003/Monsalma-Maui-v010003/MainPage.xaml#L94-L113](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/165afd6c5cdd11b4a8d5f137e9b9093581e38c10/Monsalma-Maui-v010003/Monsalma-Maui-v010003/MainPage.xaml#L94-L113)
 
 Tada! Even though we have 10k items, our data grid works fine! Try disabling UI virtulization by setting `VirtualizationEnabled` to `False` and you'll see the difference. 
 
