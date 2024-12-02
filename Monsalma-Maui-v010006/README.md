@@ -45,14 +45,14 @@ Next, we define the data template for our templated column (`DataGridColumnTempl
 We'll use `ListView` to display selected teams. The item template is pretty straighforward:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L119-L131](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L119-L131)
 
-Finally, we defin the data grid:
+Finally, we define the data grid:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L137-L164](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L137-L164)
 
-Here everything should be easy to understand. If not, please refer to previous demos:
-[Version 1.0.3 Demo](https://github.com/Monsalma/Monsalma.Maui.Controls/tree/main/Monsalma-Maui-v010003)
-[Version 1.0.2 Demo](https://github.com/Monsalma/Monsalma.Maui.Controls/tree/main/Monsalma-Maui-v010002)
-[Version 1.0.1 Demo](https://github.com/Monsalma/Monsalma.Maui.Controls/tree/main/Monsalma-Maui-v010001)
-[Version 1.0.0 Demo](https://github.com/Monsalma/Monsalma.Maui.Controls/tree/main/Monsalma-Maui-v010000)
+Here everything should be easy to understand. If not, please refer to previous demos: <br/>
+[Version 1.0.3 Demo](https://github.com/Monsalma/Monsalma.Maui.Controls/tree/main/Monsalma-Maui-v010003) <br/>
+[Version 1.0.2 Demo](https://github.com/Monsalma/Monsalma.Maui.Controls/tree/main/Monsalma-Maui-v010002) <br/>
+[Version 1.0.1 Demo](https://github.com/Monsalma/Monsalma.Maui.Controls/tree/main/Monsalma-Maui-v010001) <br/>
+[Version 1.0.0 Demo](https://github.com/Monsalma/Monsalma.Maui.Controls/tree/main/Monsalma-Maui-v010000) <br/>
 
 It is important to understand how `DataGridColumnCommand` is defined. We use the `DataBinding` bindable property because we want to have different values for different items ("Select" for items which are not selected, "Deselect" for selected items). If we wanted to have only one button text value, we would use the `CommandText` bindable property.
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/502ffb13331ed5b67434d7b3265a486cda75d805/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L155-L160](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/502ffb13331ed5b67434d7b3265a486cda75d805/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L155-L160)
