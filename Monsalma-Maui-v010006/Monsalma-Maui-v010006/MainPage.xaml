@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:controls="clr-namespace:Monsalma.Maui.Controls;assembly=Monsalma.Maui.Controls"
+	xmlns:data="clr-namespace:Monsalma_Maui_v010006.Data"
+	xmlns:viewmodels="clr-namespace:Monsalma_Maui_v010006.ViewModels"
+	x:Class="Monsalma_Maui_v010006.MainPage"
+	x:DataType="viewmodels:MainViewModel">
+
+	<ContentPage.BindingContext>
+		<viewmodels:MainViewModel
+			x:Name="MainVM" />
+	</ContentPage.BindingContext>
+
+	<ContentPage.Resources>
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="RegularOddRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=White}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="RegularEvenRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Gray100}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<Style
+			TargetType="controls:DataGridRowRegular"
+			x:Key="SelectedRowStyle">
+
+			<Setter
+				Property="CellBackgroundColor"
+				Value="{StaticResource Key=Yellow100Accent}" />
+
+			<Setter
+				Property="CellForegroundColor"
+				Value="{StaticResource Key=Black}" />
+		</Style>
+
+		<Style
+			TargetType="Button"
+			x:Key="ButtonCellStyle">
+
+			<Setter
+				Property="BackgroundColor"
+				Value="{StaticResource Key=Primary}" />
+
+			<Setter
+				Property="TextColor"
+				Value="White" />
+
+			<Setter
+				Property="MaximumHeightRequest"
+				Value="64" />
+
+			<Setter
+				Property="Margin"
+				Value="0, 16, 0, 0" />
+
+		</Style>
+
+		<DataTemplate
+			x:Key="nbaTeamTemplate"
+			x:DataType="data:NBATeam">
+
+			<Grid
+				Padding="5"
+				BindingContext="{Binding Path=BindingContext, Source={RelativeSource TemplatedParent}, x:DataType=BindableObject}"
+				HorizontalOptions="Fill"
+				ColumnDefinitions="Auto, Auto">
+
+				<Image
+					Grid.Column="0"
+					WidthRequest="64"
+					HeightRequest="64"
+					VerticalOptions="Center"
+					Source="{Binding ImageSource}" />
+				<Label
+					Grid.Column="1"
+					Padding="5"
+					VerticalOptions="Center"
+					Text="{Binding Name}" />
+			</Grid>
+		</DataTemplate>
+	</ContentPage.Resources>
+
+	<Grid
+		ColumnDefinitions="*"
+		RowDefinitions="Auto, *">
+
+		<Border
+			Grid.Row="0"
+			Margin="10"
+			Padding="10"
+			VerticalOptions="Start">
+
+			<VerticalStackLayout>
+
+				<Label
+					Padding="0, 0, 0, 10"
+					Text="Select your 3 favorite NBA teams" />
+
+				<ListView
+					ItemsSource="{Binding SelectedTeams}">
+
+					<ListView.ItemTemplate>
+						<DataTemplate
+							x:DataType="data:NBATeam">
+
+							<TextCell
+								Text="{Binding Name}" />
+						</DataTemplate>
+					</ListView.ItemTemplate>
+
+				</ListView>
+
+			</VerticalStackLayout>
+
+		</Border>
+
+		<controls:DataGrid
+			Grid.Row="1"
+			Margin="10"
+			Items="{Binding NBATeams}"
+			IsReadOnly="True"
+			RegularOddRowStyle="{StaticResource Key=RegularOddRowStyle}"
+			RegularEvenRowStyle="{StaticResource Key=RegularEvenRowStyle}"
+			SelectedRowStyle="{StaticResource Key=SelectedRowStyle}"
+			ShowHeaderRow="False"
+			VirtualizationEnabled="False">
+
+			<controls:DataGrid.Columns>
+
+				<controls:DataGridColumnTemplated
+					Width="*"
+					MinWidth="100"
+					CellTemplate="{StaticResource Key=nbaTeamTemplate}" />
+
+				<controls:DataGridColumnCommand
+					Width="Auto"
+					MinWidth="100"
+					DataBinding="IsSelectedText"
+					Command="{Binding SelectDeselectCommand, Source={x:Reference MainVM}}"
+					CellStyle="{StaticResource Key=ButtonCellStyle}" />
+
+			</controls:DataGrid.Columns>
+
+		</controls:DataGrid>
+
+	</Grid>
+
+</ContentPage>
