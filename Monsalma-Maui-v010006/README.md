@@ -33,7 +33,7 @@ The view model initiates the command, which we'll use later in XAML. It's import
 First we import the package ([`Monsalma.Maui.Controls`](https://www.nuget.org/packages/Monsalma.Maui.Controls/1.0.6)) and local namespaces (data and view model):
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L5-L7](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L5-L7)
 
-Similar to previous demos, then we define row styles (header row, odd row, even row and selected row) for the data grid control:
+Similar to previous demos, then we define row styles (odd row, even row and selected row) for the data grid control:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L17-L54](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L17-L54)
 
 In this demo we also need to define the button style, to be used when defining `DataGridColumnCommand`:
