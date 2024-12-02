@@ -71,9 +71,6 @@ namespace Monsalma_Maui_v010006.ViewModels
                         {
                             team.IsSelected = false;
                             SelectedTeams.Remove(team);
-
-                            team.OnPropertyChanged(nameof(team.IsSelectedText));
-                            OnPropertyChanged(nameof(SelectedTeams));
                         }
                         else // select
                         {
@@ -81,9 +78,6 @@ namespace Monsalma_Maui_v010006.ViewModels
                             {
                                 team.IsSelected = true;
                                 SelectedTeams.Add(team);
-
-                                team.OnPropertyChanged(nameof(team.IsSelectedText));
-                                OnPropertyChanged(nameof(SelectedTeams));
                             }
                         }
                     }

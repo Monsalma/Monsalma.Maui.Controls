@@ -6,7 +6,22 @@ namespace Monsalma_Maui_v010006.Data
     public partial class NBATeam : INotifyPropertyChanged
     {
         #region Properties
-        public bool IsSelected { get; set; }
+        private bool isSelected;
+        public bool IsSelected 
+        {
+            get => isSelected;
+
+            set
+            {
+                if (isSelected != value)
+                {
+                    isSelected = value;
+                    OnPropertyChanged(nameof(IsSelected));
+                    OnPropertyChanged(nameof(IsSelectedText));
+                }
+            }
+        }
+
         public string IsSelectedText => IsSelected ? "Deselect" : "Select";
         public string Name { get; set; }
         public string ImageSource { get; set; }
