@@ -42,7 +42,7 @@ Similar to previous demos, then we define row styles (odd row, even row and sele
 In this demo we also need to define the button style, to be used when defining `DataGridColumnCommand`:
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L56-L76](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L56-L76)
 
-### Data template
+### [Data template](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate?view=net-maui-9.0)
 Next, we define the data template for our templated column (`DataGridColumnTemplated`) which will contain team logo ([`Image`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/image?view=net-maui-9.0)) and team name ([`Label`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/label?view=net-maui-9.0)):
 [https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L78-L100](https://github.com/Monsalma/Monsalma.Maui.Controls/blob/30a200543a11d17eca0b68a3c21d3f9e6c43b39d/Monsalma-Maui-v010006/Monsalma-Maui-v010006/MainPage.xaml#L78-L100)
 
