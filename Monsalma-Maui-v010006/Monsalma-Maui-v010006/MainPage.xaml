@@ -66,12 +66,12 @@
 				Value="White" />
 
 			<Setter
-				Property="MaximumHeightRequest"
-				Value="64" />
+				Property="HorizontalOptions"
+				Value="CenterAndExpand" />
 
 			<Setter
-				Property="Margin"
-				Value="0, 16, 0, 0" />
+				Property="VerticalOptions"
+				Value="CenterAndExpand" />
 
 		</Style>
 
